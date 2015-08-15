@@ -1,0 +1,13 @@
+
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif£¬"ÐÂËÎÌå";}
+/* searchbox */
+.searchbox{background:#3366cc;height:28px;width:720px;margin:20px auto;padding:7px 0 0 10px;width:380px;}
+#keyword{float:left;height:21px;line-height:21px;border:none;padding:0px;}
+#searchsort{float:left;position:relative;display:none;width:66px;overflow:hidden;height:21px;background-color:#fff;font-size:12px;}
+#searchsort .selectedsort{height:17px;padding-top:4px;color:#555;line-height:1;text-align:center;white-space:nowrap;}
+#searchsort .searchsortlist{position:absolute;text-align:left;width:64px;display:none;background-color:#fff;box-shadow:1px 1px 1px rgba(0,0,0,0.3);left:1px;top:21px;border:1px solid #ccc;border-top:none;color:#555;}
+#searchsort .sortico{width:7px;height:4px;display:inline-block;font-size:0px;vertical-align:middle;margin-left:3px;background:url(images/searchIco.png) no-repeat;}
+#searchsort .searchItem{height:21px;line-height:21px;padding-left:4px;cursor:pointer;}
+#searchbtn{float:left;display:inline;margin:0px 0px 0px 3px;width:62px;height:23px;border:none;cursor:pointer;padding:0px;background:url(images/kwbtn.jpg) no-repeat;}  

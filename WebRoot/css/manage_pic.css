@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.demo{width:810px;margin:0 auto;}
+/* zp_box */
+.zp_box{width:310px;height:190px;display:inline;overflow:hidden;float:left;margin:7px 7px;cursor:pointer;}
+.zp_box img{width:400px;height:300px;}
+.pop_tit{width:290px;height:40px;padding:10px 10px 5px 10px;background:url(../images/zp_titbg.gif) no-repeat 0px 0px;display:none;}
+.p_tit1, a{line-height:18px;color:#ffffff;font-size:18px;padding-right:18px;}
+.p_tit2{line-height:15px;font-family:Arial;color:#fd8200;font-size:12px;}

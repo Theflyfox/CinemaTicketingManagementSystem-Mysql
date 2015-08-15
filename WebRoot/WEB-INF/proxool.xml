@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxool-config>
+	<proxool>
+		<alias>datasource1</alias>
+		<driver-url>jdbc:mysql://localhost/hongda?characterEncoding=utf-8</driver-url>
+		<driver-class>org.gjt.mm.mysql.Driver</driver-class>
+		<driver-properties>
+			<property name="user" value="root" />
+			<property name="password" value="root" />
+		</driver-properties>
+		<house-keeping-sleep-time>60000</house-keeping-sleep-time>
+		<maximum-connection-count>5</maximum-connection-count>
+		<minimum-connection-count>1</minimum-connection-count>
+		<prototype-count>1</prototype-count>
+		<maximum-new-connections>1</maximum-new-connections>
+		<simultaneous-build-throttle>1</simultaneous-build-throttle>
+		<statistics>30s,10m,1d</statistics>
+		<statistics-log-level>ERROR</statistics-log-level>
+	</proxool>
+</proxool-config>
+

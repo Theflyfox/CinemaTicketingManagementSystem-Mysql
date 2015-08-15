@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+
+
+	<servlet>
+		<servlet-name>ServletConfigurator</servlet-name>
+		<servlet-class>org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>
+		<init-param>
+			<param-name>xmlFile</param-name>
+			<param-value>WEB-INF/proxool.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- 编码集过滤器 -->
+	<filter>
+		<filter-name>charsetFilter</filter-name>
+		<filter-class>com.suehon.filter.CharsetFilter</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>isLoginFilter</filter-name>
+		<filter-class>com.suehon.filter.IsLoginFilter</filter-class>
+	</filter>
+	
+	
+	
+	
+	
+	<filter-mapping>
+		<filter-name>isLoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>charsetFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 编码集过滤器 -->
+	
+	
+	
+	<servlet>
+		<servlet-name>ShowAddShowroomPageServlet</servlet-name>
+		<servlet-class>com.suehon.servlet.ShowAddShowroomPageServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <servlet-name>AddShowroomServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.AddShowroomServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>ModifyShowroomPageServlet</servlet-name>
+  	<servlet-class>com.suehon.servlet.ModifyShowroomPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IsShowroomExistsServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.IsShowroomExistsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddShowroomTypeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.AddShowroomTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowManagerShowroomPageServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.ShowManagerShowroomPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteShowroomServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.DeleteShowroomServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetShowroomInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetShowroomInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyShowroomInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.ModifyShowroomInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>IsFilmExistsServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.IsFilmExistsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowFilmDetailInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.ShowFilmDetailInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddFilmServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.AddFilmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ManageFilmInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.ManageFilmInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyFilmInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.ModifyFilmInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PrepareInfoForModifyFilmServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.PrepareInfoForModifyFilmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFilmServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.DeleteFilmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFilmPicServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.DeleteFilmPicServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddMoreFilmPostServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.AddMoreFilmPostServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetShowroomNameAndTypeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetShowroomNameAndTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetFilmNameAndIdServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetFilmNameAndIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetFilmOtherInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetFilmOtherInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddFilmOnscreenServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.AddFilmOnscreenServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MangeFilmOnscreenInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.MangeFilmOnscreenInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFilmOnscreenPlanServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.DeleteFilmOnscreenPlanServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PrepareInfoForModifyFilmOnscreenServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.PrepareInfoForModifyFilmOnscreenServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SetShowroomSiteServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.SetShowroomSiteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BuyTicketServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.BuyTicketServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PreParTicketSaleInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.PreParTicketSaleInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSingalFilmInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetSingalFilmInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetFilmOnscreenStartDateAndTimeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetFilmOnscreenStartDateAndTimeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DrawSiteServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.DrawSiteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DmlTicketTradeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.DmlTicketTradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayMonyForTheTradeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.PayMonyForTheTradeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAlreadySoldoutTicketServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetAlreadySoldoutTicketServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckVipServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.CheckVipServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetTwoDemensionImgServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetTwoDemensionImgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GenerateVipNoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GenerateVipNoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ManageVipServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.ManageVipServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddEmployeeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.AddEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MangeEmployeeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.MangeEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteEmployeeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.DeleteEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PrepareInfoForModifyEmployeeServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.PrepareInfoForModifyEmployeeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyEmployeeInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.ModifyEmployeeInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetSalesDetailsServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetSalesDetailsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAttendanceRateByShowroomServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetAttendanceRateByShowroomServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetAttendanceOfFilmSerlvet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetAttendanceOfFilmSerlvet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetEveryMonthSalesServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetEveryMonthSalesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetUserInfoServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.GetUserInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.suehon.servlet.LoginServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>ModifyShowroomPageServlet</servlet-name>
+		<url-pattern>/ModifyShowroomPageServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ShowAddShowroomPageServlet</servlet-name>
+		<url-pattern>/ShowAddShowroomPageServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShowroomServlet</servlet-name>
+    <url-pattern>/AddShowroomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsShowroomExistsServlet</servlet-name>
+    <url-pattern>/IsShowroomExistsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShowroomTypeServlet</servlet-name>
+    <url-pattern>/AddShowroomTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowManagerShowroomPageServlet</servlet-name>
+    <url-pattern>/ShowManagerShowroomPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteShowroomServlet</servlet-name>
+    <url-pattern>/DeleteShowroomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetShowroomInfoServlet</servlet-name>
+    <url-pattern>/GetShowroomInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyShowroomInfoServlet</servlet-name>
+    <url-pattern>/ModifyShowroomInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IsFilmExistsServlet</servlet-name>
+    <url-pattern>/IsFilmExistsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowFilmDetailInfoServlet</servlet-name>
+    <url-pattern>/ShowFilmDetailInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFilmServlet</servlet-name>
+    <url-pattern>/AddFilmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageFilmInfoServlet</servlet-name>
+    <url-pattern>/ManageFilmInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyFilmInfoServlet</servlet-name>
+    <url-pattern>/ModifyFilmInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrepareInfoForModifyFilmServlet</servlet-name>
+    <url-pattern>/PrepareInfoForModifyFilmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFilmServlet</servlet-name>
+    <url-pattern>/DeleteFilmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFilmPicServlet</servlet-name>
+    <url-pattern>/DeleteFilmPicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddMoreFilmPostServlet</servlet-name>
+    <url-pattern>/AddMoreFilmPostServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetShowroomNameAndTypeServlet</servlet-name>
+    <url-pattern>/GetShowroomNameAndTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetFilmNameAndIdServlet</servlet-name>
+    <url-pattern>/GetFilmNameAndIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetFilmOtherInfoServlet</servlet-name>
+    <url-pattern>/GetFilmOtherInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFilmOnscreenServlet</servlet-name>
+    <url-pattern>/AddFilmOnscreenServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MangeFilmOnscreenInfoServlet</servlet-name>
+    <url-pattern>/MangeFilmOnscreenInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFilmOnscreenPlanServlet</servlet-name>
+    <url-pattern>/DeleteFilmOnscreenPlanServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrepareInfoForModifyFilmOnscreenServlet</servlet-name>
+    <url-pattern>/PrepareInfoForModifyFilmOnscreenServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SetShowroomSiteServlet</servlet-name>
+    <url-pattern>/SetShowroomSiteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BuyTicketServlet</servlet-name>
+    <url-pattern>/BuyTicketServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PreParTicketSaleInfoServlet</servlet-name>
+    <url-pattern>/PreParTicketSaleInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSingalFilmInfoServlet</servlet-name>
+    <url-pattern>/GetSingalFilmInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetFilmOnscreenStartDateAndTimeServlet</servlet-name>
+    <url-pattern>/GetFilmOnscreenStartDateAndTimeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DrawSiteServlet</servlet-name>
+    <url-pattern>/DrawSiteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DmlTicketTradeServlet</servlet-name>
+    <url-pattern>/DmlTicketTradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayMonyForTheTradeServlet</servlet-name>
+    <url-pattern>/PayMonyForTheTradeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAlreadySoldoutTicketServlet</servlet-name>
+    <url-pattern>/GetAlreadySoldoutTicketServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckVipServlet</servlet-name>
+    <url-pattern>/CheckVipServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetTwoDemensionImgServlet</servlet-name>
+    <url-pattern>/GetTwoDemensionImgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GenerateVipNoServlet</servlet-name>
+    <url-pattern>/GenerateVipNoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManageVipServlet</servlet-name>
+    <url-pattern>/ManageVipServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddEmployeeServlet</servlet-name>
+    <url-pattern>/AddEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MangeEmployeeServlet</servlet-name>
+    <url-pattern>/MangeEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteEmployeeServlet</servlet-name>
+    <url-pattern>/DeleteEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrepareInfoForModifyEmployeeServlet</servlet-name>
+    <url-pattern>/PrepareInfoForModifyEmployeeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyEmployeeInfoServlet</servlet-name>
+    <url-pattern>/ModifyEmployeeInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSalesDetailsServlet</servlet-name>
+    <url-pattern>/GetSalesDetailsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAttendanceRateByShowroomServlet</servlet-name>
+    <url-pattern>/GetAttendanceRateByShowroomServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetAttendanceOfFilmSerlvet</servlet-name>
+    <url-pattern>/GetAttendanceOfFilmSerlvet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetEveryMonthSalesServlet</servlet-name>
+    <url-pattern>/GetEveryMonthSalesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserInfoServlet</servlet-name>
+    <url-pattern>/GetUserInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,99 @@
+body {
+	MARGIN: 0px
+}
+p {
+	MARGIN: 0px
+}
+body {
+	COLOR: #000; BACKGROUND-COLOR: #fff
+}
+body {
+	FONT-SIZE: 12px; LINE-HEIGHT: 150%; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+table {
+	FONT-SIZE: 12px; LINE-HEIGHT: 150%; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+INPUT {
+	FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+SELECT {
+	FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+TEXTAREA {
+	FONT-SIZE: 12px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+A:link {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+A.menuChild:link {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A.menuChild:visited {
+	COLOR: #036; TEXT-DECORATION: none
+}
+A.menuChild:hover {
+	COLOR: #f60; TEXT-DECORATION: underline
+}
+A.menuParent:link {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A.menuParent:visited {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A.menuParent:hover {
+	COLOR: #f60; TEXT-DECORATION: none
+}
+table.position {
+	WIDTH: 100%
+}
+tr.position {
+	HEIGHT: 25px; BACKGROUND-COLOR: #f4f7fc
+}
+td.position {
+	BORDER-RIGHT: #adceff 1px solid; PADDING-LEFT: 20px; BORDER-BOTTOM: #adceff 1px solid
+}
+table.listTable {
+	WIDTH: 98%; BACKGROUND-COLOR: #b1ceee
+}
+tr.listHeaderTr {
+	FONT-WEIGHT: bold; HEIGHT: 25px; BACKGROUND-COLOR: #ebf4fd; TEXT-ALIGN: center
+}
+tr.listTr {
+	HEIGHT: 25px; BACKGROUND-COLOR: #fff; TEXT-ALIGN: center
+}
+tr.listAlternatingTr {
+	HEIGHT: 25px; BACKGROUND-COLOR: #fffdf0; TEXT-ALIGN: center
+}
+tr.listFooterTr {
+	HEIGHT: 30px; BACKGROUND-COLOR: #ebf4fd; TEXT-ALIGN: center
+}
+table.editTable {
+	WIDTH: 98%; BACKGROUND-COLOR: #b1ceee
+}
+tr.editHeaderTr {
+	HEIGHT: 25px; BACKGROUND-COLOR: #ebf4fd
+}
+td.editHeaderTd {
+	PADDING-LEFT: 50px; FONT-WEIGHT: bold
+}
+tr.editTr {
+	HEIGHT: 30px
+}
+td.editLeftTd {
+	WIDTH: 150px; BACKGROUND-COLOR: #fffdf0; TEXT-ALIGN: center
+}
+td.editRightTd {
+	PADDING-LEFT: 10px; BACKGROUND-COLOR: #fff
+}
+tr.editFooterTr {
+	HEIGHT: 40px; BACKGROUND-COLOR: #ebf4fd
+}
+td.editFooterTd {
+	PADDING-LEFT: 150px
+}
